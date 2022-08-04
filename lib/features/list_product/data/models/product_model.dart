@@ -1,3 +1,5 @@
+import 'package:kredit_plus_test/features/list_product/domain/entities/product_entity.dart';
+
 class ProductModel {
   ProductModel({
     required this.id,
@@ -11,7 +13,7 @@ class ProductModel {
 
   int id;
   String title;
-  String price;
+  double price;
   String description;
   String category;
   String image;
@@ -26,6 +28,16 @@ class ProductModel {
         image: json["image"],
         rating: RatingModel.fromJson(json["rating"]),
       );
+
+  ProductEntity toEntity() => ProductEntity(
+        id: id,
+        title: title,
+        price: price,
+        description: description,
+        category: category,
+        image: image,
+        rating: rating.toEntity(),
+      );
 }
 
 class RatingModel {
@@ -38,4 +50,6 @@ class RatingModel {
         rate: json["rate"],
         count: json["count"],
       );
+
+  RatingEntity toEntity() => RatingEntity(rate: rate, count: count);
 }
