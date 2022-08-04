@@ -4,6 +4,7 @@ import 'package:equatable/equatable.dart';
 import 'package:kredit_plus_test/features/list_product/domain/entities/product_entity.dart';
 
 List<ProductModel> productModelFromJson(String str) => List<ProductModel>.from(json.decode(str).map((x) => ProductModel.fromJson(x)));
+List<ProductEntity> productEntityFromModel(List<ProductModel> model) => List<ProductEntity>.from(model.map((e) => e.toEntity()));
 
 class ProductModel extends Equatable {
   ProductModel({

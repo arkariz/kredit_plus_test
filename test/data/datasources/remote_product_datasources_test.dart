@@ -1,5 +1,3 @@
-import 'dart:convert';
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter_test/flutter_test.dart';
@@ -21,7 +19,7 @@ void main() {
   });
 
   group('get list of product', () {
-    final productModel = productModelFromJson(readJson('helper/dummy_data/dummy_product_response.json'));
+    final productModel = productModelFromJson(readJson('helper/dummy_data/dummy_list_product_response.json'));
 
     test(
       'should return product model when the response code is 200',
@@ -31,7 +29,7 @@ void main() {
           mockHttpClient.get(Uri.parse("https://fakestoreapi.com/products")),
         ).thenAnswer(
           (_) async => http.Response(
-            readJson('helper/dummy_data/dummy_product_response.json'),
+            readJson('helper/dummy_data/dummy_list_product_response.json'),
             200,
             headers: {
               HttpHeaders.contentTypeHeader: 'application/json; charset=utf-8',
