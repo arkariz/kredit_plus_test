@@ -4,7 +4,7 @@ import 'package:kredit_plus_test/features/list_product/domain/entities/product_e
 import 'package:kredit_plus_test/features/list_product/domain/usecases/product_usecase.dart';
 import 'package:mockito/mockito.dart';
 
-import '../../test_helper.mocks.dart';
+import '../../helper/test_helper.mocks.dart';
 
 void main() {
   late MockProductRepository mockProductRepository;

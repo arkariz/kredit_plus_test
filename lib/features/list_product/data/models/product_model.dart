@@ -1,6 +1,7 @@
+import 'package:equatable/equatable.dart';
 import 'package:kredit_plus_test/features/list_product/domain/entities/product_entity.dart';
 
-class ProductModel {
+class ProductModel extends Equatable {
   ProductModel({
     required this.id,
     required this.title,
@@ -38,9 +39,20 @@ class ProductModel {
         image: image,
         rating: rating.toEntity(),
       );
+
+  @override
+  List<Object?> get props => [
+        id,
+        title,
+        price,
+        description,
+        category,
+        image,
+        rating,
+      ];
 }
 
-class RatingModel {
+class RatingModel extends Equatable {
   RatingModel({required this.rate, required this.count});
 
   double rate;
@@ -52,4 +64,10 @@ class RatingModel {
       );
 
   RatingEntity toEntity() => RatingEntity(rate: rate, count: count);
+
+  @override
+  List<Object?> get props => [
+        rate,
+        count,
+      ];
 }
