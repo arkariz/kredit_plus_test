@@ -1,5 +1,9 @@
+import 'dart:convert';
+
 import 'package:equatable/equatable.dart';
 import 'package:kredit_plus_test/features/list_product/domain/entities/product_entity.dart';
+
+List<ProductModel> productModelFromJson(String str) => List<ProductModel>.from(json.decode(str).map((x) => ProductModel.fromJson(x)));
 
 class ProductModel extends Equatable {
   ProductModel({
@@ -23,7 +27,7 @@ class ProductModel extends Equatable {
   factory ProductModel.fromJson(Map<String, dynamic> json) => ProductModel(
         id: json["id"],
         title: json["title"],
-        price: json["price"],
+        price: double.parse(json["price"].toString()),
         description: json["description"],
         category: json["category"],
         image: json["image"],
@@ -59,7 +63,7 @@ class RatingModel extends Equatable {
   int count;
 
   factory RatingModel.fromJson(Map<String, dynamic> json) => RatingModel(
-        rate: json["rate"],
+        rate: double.parse(json["rate"].toString()),
         count: json["count"],
       );
 
