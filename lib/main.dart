@@ -1,3 +1,4 @@
+import 'package:desktop_window/desktop_window.dart';
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:kredit_plus_test/core/config/device.dart';
@@ -8,6 +9,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await initializeDependencies();
+
+  await DesktopWindow.setMinWindowSize(const Size(600, 450));
+
   final device = Device();
   device.getDeviceType();
 
