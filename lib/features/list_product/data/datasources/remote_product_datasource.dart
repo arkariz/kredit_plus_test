@@ -10,6 +10,8 @@ class RemoteProductDatasourceImpl implements RemoteProductDataSource {
 
   RemoteProductDatasourceImpl(this.client);
 
+
+  // NOTE | Make HTTP Request to retrieve product data
   @override
   Future<List<ProductModel>> getProducts() async {
     try {

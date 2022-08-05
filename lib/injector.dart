@@ -8,7 +8,6 @@ import 'package:kredit_plus_test/features/list_product/domain/usecases/product_u
 final injector = GetIt.instance;
 
 Future<void> initializeDependencies() async {
-  //COMMENT : Biodiversitas Dependencies
   injector.registerSingleton<http.Client>(http.Client());
   injector.registerSingleton<RemoteProductDataSource>(RemoteProductDatasourceImpl(injector()));
   injector.registerSingleton<ProductRepository>(ProductRepositoryImpl(injector()));

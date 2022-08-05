@@ -3,7 +3,10 @@ import 'dart:convert';
 import 'package:equatable/equatable.dart';
 import 'package:kredit_plus_test/features/list_product/domain/entities/product_entity.dart';
 
+// NOTE | Function for mapping json to product model
 List<ProductModel> productModelFromJson(String str) => List<ProductModel>.from(json.decode(str).map((x) => ProductModel.fromJson(x)));
+
+// NOTE | Function for mapping product model to product entity
 List<ProductEntity> productEntityFromModel(List<ProductModel> model) => List<ProductEntity>.from(model.map((e) => e.toEntity()));
 
 class ProductModel extends Equatable {

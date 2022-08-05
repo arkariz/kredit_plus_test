@@ -29,7 +29,8 @@ class ProductController extends GetxController {
       }
     } else {
       errorMessage(products.error);
-      // Get.snackbar("Info", errorMessage.value);
+      // NOTE | Comment Get.snackbar line when unit test the controller
+      Get.snackbar("Info", errorMessage.value); 
     }
 
     isLoading(false);
