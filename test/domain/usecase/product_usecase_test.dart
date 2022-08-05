@@ -15,8 +15,8 @@ void main() {
     usecase = ProductUsecase(mockProductRepository);
   });
 
-  final ratingDummy = RatingEntity(rate: 3.5, count: 240);
-  final productOne = ProductEntity(
+  const ratingDummy = RatingEntity(rate: 3.5, count: 240);
+  const productOne = ProductEntity(
     id: 1,
     title: "product 1",
     price: 10000,
@@ -25,7 +25,7 @@ void main() {
     image: "productoneimage",
     rating: ratingDummy,
   );
-  final productTwo = ProductEntity(
+  const productTwo = ProductEntity(
     id: 2,
     title: "product 2",
     price: 20000,

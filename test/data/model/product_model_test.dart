@@ -9,8 +9,8 @@ import '../../helper/read_json.dart';
 // import '../../helpers/json_reader.dart';
 
 void main() {
-  final ratingModel = RatingModel(rate: 3.9, count: 120);
-  final productModel = ProductModel(
+  const ratingModel = RatingModel(rate: 3.9, count: 120);
+  const productModel = ProductModel(
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
     price: 109.95,
@@ -20,8 +20,8 @@ void main() {
     rating: ratingModel,
   );
 
-  final ratingEntity = RatingEntity(rate: 3.9, count: 120);
-  final productEntity = ProductEntity(
+  const ratingEntity = RatingEntity(rate: 3.9, count: 120);
+  const productEntity = ProductEntity(
     id: 1,
     title: "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
     price: 109.95,
