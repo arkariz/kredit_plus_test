@@ -13,20 +13,22 @@ class ListProductPage extends GetView<ProductController> {
   @override
   Widget build(BuildContext context) {
     Get.put(ProductController(injector()));
-    return Scaffold(
-      body: LayoutBuilder(
-        builder: ((context, constraints) {
-          if (constraints.maxWidth < 600) {
-            return MobileView(controller: controller);
-          } else if (constraints.maxWidth > 600 && constraints.maxWidth < 1080) {
-            return TabletView(controller: controller);
-          } else {
-            return DesktopView(controller: controller);
-          }
-        }),
+    return Obx(
+      () => Scaffold(
+        body: controller.isLoading.value
+            ? const Center(child: CircularProgressIndicator())
+            : LayoutBuilder(
+                builder: ((context, constraints) {
+                  if (constraints.maxWidth < 600) {
+                    return MobileView(controller: controller);
+                  } else if (constraints.maxWidth > 600 && constraints.maxWidth < 1080) {
+                    return TabletView(controller: controller);
+                  } else {
+                    return DesktopView(controller: controller);
+                  }
+                }),
+              ),
       ),
     );
-    //Device.isPhone() ? MobileView(controller: controller) : DesktopView(controller: controller),
-    // );
   }
 }
