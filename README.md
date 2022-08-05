@@ -27,6 +27,10 @@ To build android app, open terminal and navigate to project root directory <br/>
 then type "flutter build web". <br/>
 the web file will be genereted at "\build\web"
 
+Alternately you can deploy directly using terminal <br/>
+To do this, open terminal and navigate to project root directory <br/>
+the type "flutter run --release -d chrome"
+
 Deploying to the web <br/>
 When you are ready to deploy your app, upload the release bundle to Firebase, the cloud, or a similar service. <br/>
 Here are a few possibilities, but there are many others:
