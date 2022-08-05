@@ -15,7 +15,7 @@ class PriceText extends StatelessWidget {
       text,
       style: TextStyle(
         fontSize: 16.0,
-        // fontFamily: "Manrope",
+        fontFamily: "Inter",
         fontWeight: FontWeight.bold,
         color: textColor ?? Colors.black,
       ),

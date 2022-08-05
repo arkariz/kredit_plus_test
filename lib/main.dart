@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
+import 'package:kredit_plus_test/core/config/device.dart';
 import 'package:kredit_plus_test/features/list_product/presentation/pages/list_product_page.dart';
 import 'package:kredit_plus_test/injector.dart';
 
@@ -7,6 +8,9 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await initializeDependencies();
+  final device = Device();
+  device.getDeviceType();
+
   runApp(const MyApp());
 }
 
@@ -21,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
-      home: ListProductPage(),
+      home: const ListProductPage(),
     );
   }
 }

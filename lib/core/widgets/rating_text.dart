@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class H1Text extends StatelessWidget {
-  const H1Text({
+class RatingText extends StatelessWidget {
+  const RatingText({
     Key? key,
     required this.text, this.textColor,
   }) : super(key: key);
@@ -15,7 +15,7 @@ class H1Text extends StatelessWidget {
       text,
       style: TextStyle(
         fontSize: 12.0,
-        // fontFamily: "Manrope",
+        fontFamily: "Inter",
         fontWeight: FontWeight.bold,
         color: textColor ?? Colors.black,
       ),

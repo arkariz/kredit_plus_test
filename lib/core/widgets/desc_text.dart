@@ -14,12 +14,13 @@ class DescriptionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
+      maxLines: 4,
       style: TextStyle(
-        fontSize: 10.0,
-        // fontFamily: "Manrope",
-        fontWeight: FontWeight.w400,
-        color: textColor ?? Colors.black,
-      ),
+          fontSize: 10.0,
+          fontFamily: "Inter",
+          fontWeight: FontWeight.w400,
+          color: textColor ?? Colors.black,
+          overflow: TextOverflow.ellipsis),
     );
   }
 }
