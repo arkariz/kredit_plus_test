@@ -1,4 +1,4 @@
-# Kredut Plus Technical Test
+# Kredit Plus Technical Test
 
 
 ## Supported Device
